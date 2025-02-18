@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Alfa Slab One", serif;
+}
+
+body {
+    background: linear-gradient(to right, rgb(255, 170, 170) 0%, rgb(255, 255, 255) 100%);
+
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    margin: 0 10px;
+}
+
+
+.topbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #333;
+
+
+}
+
+.logo {
+    width: 150px;
+    display: flex;
+    justify-content: center;  
+ 
+}
+.logo img {
+    width: 90%;
+    padding: 10px;
+    border-radius: 150px;
+
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.menu li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.frontPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 80vh;
+
+}
+
+.frontPageContentLeft {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.frontPageContentLeft img {
+    width: 70%;
+    border-radius: 100%;
+}
+
+.frontPageContentRight {
+    width: 50%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #333;
+
+
+}
+
+.frontPageContentRight h1 {
+    font-size: 5rem;
+}
+.frontPageContentRight h2 {
+    width: 80%;
+    font-size: 2.7rem;
+}
+
+.frontPageContentRight p {
+    font-size: 1.1rem;
+}
+
+.frontPageContentRight button a {
+    padding: 10px 20px;
+    background: #5280f4;
+    color: white !important;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
