@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=New+Rocker&family=Rock+Salt&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, rgb(255, 170, 170) 0%, rgb(255, 255, 255) 100%);
+    font-family: "Rock Salt", serif;
+
+    animation: fadeIn 1s ease-in;
+
+}
+
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+    margin: 0 10px;
+}
+
+
+.topbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #333;
+
+
+}
+
+.logo {
+    width: 150px;
+    display: flex;
+    justify-content: center;  
+
+}
+.logo img {
+    width: 90%;
+    padding: 10px;
+    border-radius: 150px;
+
+    transition: all 0.3s ease;
+
+}
+
+.logo img:hover {
+    transform: rotate(360deg);
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.menu li {
+    list-style: none;
+    margin: 0 10px;
+
+}
+.menu a {
+    padding: 5px 20px;
+    background: #f45252;
+    border-radius: 5px;
+    color: white;
+    font-family: Inter;
+    font-size: 1.5rem;
+}
+
+.loginPage {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 80vh;
+
+    animation: slideUp 0.8s ease-out;
+
+}
+.loginLeft {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginLeft img {
+    width: 70%;
+    border-radius: 100%;
+
+    animation: pulse 2s infinite;
+}
+
+.loginRight {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loginRight h1 {
+    font-size: 3rem;
+    color: #333;
+    
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Animaciones */
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+
