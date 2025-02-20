@@ -39,6 +39,24 @@ app.post('/register', upload.single('picture'), (req, res) => {
     );
 });
 
+app.post('/login', (req, res) => {
+    console.log('Datos recibidos en /login:', req.body);
+
+    const { username, password } = req.body;
+    
+    connection.query ('SELECT name, email FROM Users WHERE name = ? AND password = ?', [username, password], (err, rows) => {
+        if (err) {
+            console.error('Error al consultar:', err);
+            return res.status(500).json({ error: 'Error en la base de datos' });
+        }
+        if (rows.length === 0) {
+            return res.status(401).json({ error: 'Usuario o contraseña incorrectos' });
+        }
+        if (rows.length > 0) return res.status(200).json({ error: 'Usuario o contraseña correctos' });
+        res.json(rows[0]);
+    });
+});
+
 app.listen(3000, () =>  {
     console.log('Server running on 3000');
 });
