@@ -39,7 +39,7 @@
 
             <h1>Bienvenido a 1DLovers</h1>
 
-            <form class="formLogin">
+            <form class="formLogin" id="formLogin">
                 <h2>Regístrate</h2>
 
                 <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
@@ -47,17 +47,49 @@
                 <input type="password" id="password" name="password" placeholder="Contraseña" required>
 
                 <label for="avatar">Selecciona una imagen de perfil</label>
-                <input type="file" id="avatar" name="avatar" accept="image/*" required>
+                <input type="file" id="picture" name="picture" accept="image/*" required>
 
                 
-                <a href="login.html">Ya tienes una cuenta? Inicia sesión aquí</a>
                 
-                <button type="submit">Iniciar sesión</button>
+                <button id="sendData" type="submit">Iniciar sesión</button>
+
+                <a href="login.html">Ya tienes una cuenta? Inicia sesión aquí</a>
+
             </form>
 
 </div>
 
 </div>
+
+<script>
+
+document.getElementById('formLogin').addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    let formData = new FormData();
+    formData.append('username', document.getElementById('usuario').value);
+    formData.append('email', document.getElementById('email').value);
+    formData.append('password', document.getElementById('password').value);
+    formData.append('picture', document.getElementById('picture').files[0]);
+
+    try {
+        const response = await fetch('http://localhost:3000/register', {
+            method: 'POST',
+            body: formData
+        });
+
+        if (!response.ok) {
+            throw new Error('Error en la petición');
+        }
+
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+});
+
+</script>
 
 </body>
 </html>
