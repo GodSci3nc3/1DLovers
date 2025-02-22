@@ -91,6 +91,7 @@ nav a {
     animation: slideUp 0.8s ease-out;
 
 }
+/* En caso de querer agregar un lado izquierdo al login, es aquí abajo
 .loginLeft {
     width: 50%;
     display: flex;
@@ -106,6 +107,7 @@ nav a {
     animation: pulse 2s infinite;
 }
 
+*/
 .loginRight {
     width: 50%;
     display: flex;
