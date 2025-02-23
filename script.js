@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
             if (indice < preguntas.length - 1) {
                 indice++;
                 mostrarPregunta(indice);
+            } else if (indice === preguntas.length - 1) {
+                alert("¡Terminaste el cuestionario!");
             }
         });
     });
